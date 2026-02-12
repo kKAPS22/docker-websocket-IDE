@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloud IDE</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<h2>🐳 Krishna Cloud IDE</h2>
+
+<div>
+    <button class="lang-btn active" onclick="setLang(event,'python')">Python</button>
+    <button class="lang-btn" onclick="setLang(event,'javascript')">JS</button>
+    <button class="lang-btn" onclick="setLang(event,'cpp')">C++</button>
+    <button class="lang-btn" onclick="setLang(event,'c')">C</button>
+    <button class="lang-btn" onclick="setLang(event,'java')">Java</button>
+</div>
+
+<br>
+
+<div id="editor" style="height:320px;border:1px solid #333;"></div>
+
+
+<br><br>
+
+<div id="inputBox">
+    <label>Program Input:</label><br>
+    <input id="stdin">
+</div>
+
+<br><br>
+
+<button onclick="runCode()">▶ Run Code</button>
+
+<div id="output"></div>
+
+<script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
+<script src="{% static 'js/editor.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+</html>
