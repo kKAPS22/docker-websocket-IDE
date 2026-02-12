@@ -3,7 +3,7 @@ This project is a Dockerized real-time WebSocket application built on a Django b
 
 
 ## Features
-- Django-based backend server
+- Django-ASGI backend with Channels
 - Real-time communication via WebSockets
 - Containerised multi-language execution environments
 - Docker-based runtime isolation
